@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress-Up Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu Section -->
+    <div id="mainMenu">
+        <img id="menuImage" src="Main%20menu.png" alt="Main Menu" onclick="startGame()" class="clickable-image">
+    </div>
+
+    <!-- Game Section (Hidden initially) -->
+    <div id="gameContainer" style="display: none;">
+        <img id="baseImage" src="Base.png" alt="Base Character" class="z-index-0">
+        <div id="outfitContainer"></div>
+    </div>
+    
+    <div id="controls" style="display: none;">
+        <div id="categorySelector">
+            <label for="category">Select Category:</label>
+            <select id="category" onchange="loadCategoryItems()">
+                <option value="BoyLeftEye">Boy Left Eye</option>
+                <option value="GirlLeftEye">Girl Left Eye</option>
+                <option value="BoyRightEye">Boy Right Eye</option>
+                <option value="GirlRightEye">Girl Right Eye</option>
+                <option value="BoyMouth">Boy Mouth</option>
+                <option value="GirlMouth">Girl Mouth</option>
+                <option value="BoyExpression">Boy Expression</option>
+                <option value="GirlExpression">Girl Expression</option>
+                <option value="BoySocks">Boy Socks</option>
+                <option value="GirlSocks">Girl Socks</option>
+                <option value="BoyBodyHat">Boy Body Hat</option>
+                <option value="GirlBodyHat">Girl Body Hat</option>
+                <option value="BoyBra">Boy Bra</option>
+                <option value="GirlBra">Girl Bra</option>
+                <option value="Underpants">Underpants</option>
+                <option value="Panties">Panties</option>
+                <option value="BoyBoxers">Boy Boxers</option>
+                <option value="GirlBoxers">Girl Boxers</option>
+                <option value="BoySweatshirt">Boy Sweatshirt</option>
+                <option value="GirlSweatshirt">Girl Sweatshirt</option>
+                <option value="BoyShoes">Boy Shoes</option>
+                <option value="GirlShoes">Girl Shoes</option>
+                <option value="BoyPants">Boy Pants</option>
+                <option value="GirlPants">Girl Pants</option>
+                <option value="BoyTop">Boy Top</option>
+                <option value="GirlTop">Girl Top</option>
+                <option value="BoyDress">Boy Dress</option>
+                <option value="GirlDress">Girl Dress</option>
+                <option value="BoyAccessories">Boy Accessories</option>
+                <option value="GirlAccessories">Girl Accessories</option>
+                <option value="BoyJacket">Boy Jacket</option>
+                <option value="GirlJacket">Girl Jacket</option>
+            </select>
+        </div>
+
+        <div id="itemButtons">
+            <!-- Dynamically filled with buttons for items based on category -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
